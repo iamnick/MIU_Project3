@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Meta Content -->
+		<meta charset="utf-8" />
+		<meta name="description" content="Description" />
+		<meta name="keywords" content="keyword, keyword, keyword" />
+		<meta name="robots" content="index, follow" />
+		<meta name="viewport" content="user-scalable=no, width=device-width" />
+		
+		<title>Trip Planner</title>
+		
+		<link rel="stylesheet" href="css/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<header>
+			<h1>Trip Planner</h1>
+		</header>
+		<div id="pageContent">
+			<form action="#" method="post" id="addTripForm">
+				<fieldset>
+					<legend id="formTitle">Add a Trip</legend>
+					<ul id="formOptions">
+						<ul id="errors"></ul>
+						<li id="select">
+							<label for="travelMethod">Method of Travel:</label>
+						</li>
+ 						<li>
+ 							<label for="tripType">Trip Type: </label>
+							<input type="radio" checked value="Business" id="business" name="tripType" /><label for="business">Business</label>
+							<input type="radio" value="Vacation" id="vacation" name="tripType" /><label for="vacation">Vacation</label>
+						</li>
+						<li><label for="dest">Destination: </label><input type="text" id="dest" /></li>	
+						<li><label for="date">Date of Trip: </label><input type="date" id="date" /></li>
+						<li>
+							<label for="numPeople">Number of People: </label><span id="people">1</span><br />
+							<input type="range" id="numPeople" min="1" max="10" value="1"/>
+						</li>
+						<li><label for="notes">Additional Notes:</label><br /><textarea id="notes"></textarea></li>
+					</ul>
+				</fieldset>
+				<span id="buttonHolder"><input type="submit" id="addTrip" value="Add Trip" /></span>
+			</form>
+		</div>
+		<footer>
+			<nav>
+				<div id="footer">
+					<a href="addItem.html" id="addNewTrip" class="links" style="display:none;">Add A New Trip</a>
+					<a href="#" id="clearTrips" class="links">Clear Stored Trips</a>
+					<a href="#" id="viewAllTrips" class="links">View Stored Trips</a>
+				</div>
+			</nav>
+		</footer>
+		<script src="js/json.js" type="text/javascript"></script>
+		<script src="js/main.js" type="text/javascript"></script>	
+	</body>
+</html>

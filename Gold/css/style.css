@@ -1,0 +1,53 @@
+/*
+
+title: index.html Styles
+by: Nick Stelzer
+for: MIU 1209 - Project 2
+date: Sept 3rd, 2012
+
+*/
+
+#ctaDiv {
+	background-image: url("../img/cta_bg.png");
+	background-repeat: no-repeat;
+	text-shadow: 2px 2px 1px rgba(17, 23, 94, .2);
+	height: 232px;
+	width: 300px;
+	margin: 10px auto;
+}
+
+#ctaText {
+	color: #000000;
+	text-align: left;
+	position: relative;
+	height: auto;
+	width: auto;
+	left: 90px;
+	top: 80px;
+}
+
+#nextTripLocation {
+	padding-left: 40px;
+	font-weight: bold;
+	font-size: 22px;
+}
+
+#nextTripDate {
+	padding-left: 60px;
+	font-weight: bold;
+	font-size: 22px;
+}
+
+#ctaActionLink {
+	color: #ffffff;
+	position: relative;
+	height: auto;
+	width: auto;
+	text-align: center;
+	top: 120px;
+}
+
+#catThumbnailGrid {
+	text-align: center;
+	font-size: 12px;
+}
