@@ -46,7 +46,7 @@
 				<form action="" method="post" id="addTripForm">
 					<div data-role="fieldcontain">
 						<label for="tripType">Trip Type:</label>
-						<select id="tripType">
+						<select name="tripType" id="tripType" data-native-menu="false" class="required">
 							<option value="Business">Business</option>
 							<option value="Education">Education</option>
 							<option value="Family">Family</option>
@@ -55,11 +55,13 @@
 						</select>
 					</div>
 					<div data-role="fieldcontain">
+						<fieldset data-role="controlgroup">
 						<label for="travelMethod">Travel Method:</label>
 						<input type="radio" value="Plane" id="plane" name="travelMethod" /><label for="plane">Plane</label>
 						<input type="radio" value="Car" id="car" name="travelMethod" /><label for="car">Car</label>
 						<input type="radio" value="Train" id="train" name="travelMethod" /><label for="train">Train</label>
 						<input type="radio" value="Other" id="other" name="travelMethod" /><label for="other">Other</label>
+						</fieldset>
 					</div>
 					<div data-role="fieldcontain">
 						<label for="dest">Destination:</label>
@@ -67,7 +69,7 @@
 					</div>
 					<div data-role="fieldcontain">
 						<label for="date">Date:</label>
-						<input type="date" id="date" />
+						<input type="date" id="date" class="required date" />
 					</div>
 					<div data-role="fieldcontain">
 						<label for="numPeople">Number of People:</label>
@@ -76,6 +78,10 @@
 					<div data-role="fieldcontain">
 						<label for="notes">Additional Notes:</label>
 						<textarea id="notes"></textarea>
+					</div>
+					<div data-role="fieldcontain">
+						<input type="reset" value="Reset" data-theme="c" />
+						<input type="submit" value="Add Trip" data-theme="b" />
 					</div>
 				</form>
 			</div>
@@ -180,6 +186,6 @@
 		<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
 		<script src="js/libs/jquery.validate.min.js"></script>
 		<script src="js/json.js" type="text/javascript"></script>
-		<script src="js/main.js" type="text/javascript"></script>
+		<script src="js/Sample-main.js" type="text/javascript"></script>
 	</body>
 </html>
