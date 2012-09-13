@@ -57,7 +57,7 @@
 					<div data-role="fieldcontain">
 						<fieldset data-role="controlgroup">
 						<label for="travelMethod">Travel Method:</label>
-						<input type="radio" value="Plane" id="plane" name="travelMethod" /><label for="plane">Plane</label>
+						<input type="radio" value="Plane" id="plane" name="travelMethod" class="required" /><label for="plane">Plane</label>
 						<input type="radio" value="Car" id="car" name="travelMethod" /><label for="car">Car</label>
 						<input type="radio" value="Train" id="train" name="travelMethod" /><label for="train">Train</label>
 						<input type="radio" value="Other" id="other" name="travelMethod" /><label for="other">Other</label>
@@ -65,19 +65,19 @@
 					</div>
 					<div data-role="fieldcontain">
 						<label for="dest">Destination:</label>
-						<input type="text" id="dest" />
+						<input type="text" name="dest" id="dest" class="required" />
 					</div>
 					<div data-role="fieldcontain">
 						<label for="date">Date:</label>
-						<input type="date" id="date" class="required date" />
+						<input type="date" name="date" id="date" />
 					</div>
 					<div data-role="fieldcontain">
 						<label for="numPeople">Number of People:</label>
-						<input type="range" id="numPeople" min="1" max="10" value="1" />
+						<input type="range" name="numPeople" id="numPeople" min="1" max="10" value="1" />
 					</div>
 					<div data-role="fieldcontain">
 						<label for="notes">Additional Notes:</label>
-						<textarea id="notes"></textarea>
+						<textarea name="notes" id="notes"></textarea>
 					</div>
 					<div data-role="fieldcontain">
 						<input type="reset" value="Reset" data-theme="c" />

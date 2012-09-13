@@ -4,12 +4,12 @@ $('#home').on('pageinit', function(){
 		
 $('#addItem').on('pageinit', function(){
 
-		var myForm = $('#addTripForm');
-		    myForm.validate({
-			invalidHandler: function(form, validator) {
-			},
-			submitHandler: function() {
-		var data = myForm.serializeArray();
+	var myForm = $('#addTripForm');
+	myForm.validate({
+		invalidHandler: function(form, validator) {
+		},
+		submitHandler: function() {
+			var data = myForm.serializeArray();
 			storeData(data);
 		}
 	});
@@ -29,7 +29,18 @@ var getData = function(){
 };
 
 var storeData = function(data){
-	
+	var id = Math.floor(Math.random()*1000000);
+	var trip = {};
+			trip.type = ["Trip Type: ", data[0].value];
+			trip.method = ["Travel Method: ", data[1].value];
+			trip.dest = ["Destination: ", data[2].value];
+			trip.date = ["Date: ", data[3].value];
+			trip.people = ["Number of People: ", data[4].value];
+			trip.notes = ["Notes: ", data[5].value];
+		
+		// Save data into local storage, use Stringify to convert object to string
+		localStorage.setItem(id, JSON.stringify(trip));
+		alert("Trip Saved!");
 }; 
 
 var	deleteItem = function (){

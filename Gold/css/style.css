@@ -2,7 +2,7 @@
 
 title: index.html Styles
 by: Nick Stelzer
-for: MIU 1209 - Project 2
+for: MIU 1209 - Project 3
 date: Sept 3rd, 2012
 
 */
@@ -50,4 +50,10 @@ date: Sept 3rd, 2012
 #catThumbnailGrid {
 	text-align: center;
 	font-size: 12px;
+}
+
+label.error {
+	display: block;
+	margin: 10px 0;
+	color: #cc0000;
 }
