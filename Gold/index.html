@@ -45,8 +45,9 @@
 			<div data-role="content">
 				<form action="" method="post" id="addTripForm">
 					<div data-role="fieldcontain">
-						<label for="tripType">Trip Type:</label>
+						<label for="tripType" class="select">Trip Type:</label>
 						<select name="tripType" id="tripType" data-native-menu="false" class="required">
+							<option>Please Select A Trip Type</option>
 							<option value="Business">Business</option>
 							<option value="Education">Education</option>
 							<option value="Family">Family</option>
@@ -69,7 +70,7 @@
 					</div>
 					<div data-role="fieldcontain">
 						<label for="date">Date:</label>
-						<input type="date" name="date" id="date" />
+						<input type="date" name="date" id="date" value="2012-09-15" />
 					</div>
 					<div data-role="fieldcontain">
 						<label for="numPeople">Number of People:</label>
@@ -80,8 +81,14 @@
 						<textarea name="notes" id="notes"></textarea>
 					</div>
 					<div data-role="fieldcontain">
-						<input type="reset" value="Reset" data-theme="c" />
-						<input type="submit" id="addTrip" value="Add Trip" data-theme="b" />
+						<div class="ui-grid-a">
+							<div class="ui-block-a">
+								<input type="submit" id="addTrip" value="Add Trip" data-theme="b" />
+							</div>
+							<div class="ui-block-b">
+								<input type="reset" value="Reset" data-theme="d" />
+							</div>
+						</div>
 					</div>
 				</form>
 			</div>
@@ -129,19 +136,19 @@
 			<div data-role="content">
 				<div class="ui-grid-d" id="catThumbnailGrid">
 					<div class="ui-block-a" id="Business">
-						<img src="img/business_icon.png" /><br />Business
+						<img src="img/business_icon.png" /><br /><span class="catLabel" id="catLabelBusiness">Business</span>
 					</div>
 					<div class="ui-block-b" id="Education">
-						<img src="img/education_icon.png" /><br />Education
+						<img src="img/education_icon.png" /><br /><span class="catLabel" id="catLabelEducation">Education</span>
 					</div>
 					<div class="ui-block-c" id="Family">
-						<img src="img/family_icon.png" /><br />Family
+						<img src="img/family_icon.png" /><br /><span class="catLabel" id="catLabelFamily">Family</span>
 					</div>
 					<div class="ui-block-d" id="Vacation">
-						<img src="img/vacation_icon.png" /><br />Vacation
+						<img src="img/vacation_icon.png" /><br /><span class="catLabel" id="catLabelVacation">Vacation</span>
 					</div>
 					<div class="ui-block-e" id="Other">
-						<img src="img/other_icon.png" /><br />Other
+						<img src="img/other_icon.png" /><br /><span class="catLabel" id="catLabelOther">Other</span>
 					</div>
 				</div>
 			</div>
