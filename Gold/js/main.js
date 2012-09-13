@@ -29,6 +29,8 @@ $('#addItem').on('pageinit', function(){
 		for (var i = 0; i < radioButtons.length; i++) {
 			$(radioButtons[i]).removeAttr('selected');
 		}
+		var slider = document.getElementById("numPeople");
+		slider.value = "1";
 	}
 	
 });

@@ -1,117 +1,59 @@
 /*
 
-title: index.html / addItem.html Styles
+title: index.html Styles
 by: Nick Stelzer
-for: VFW 1208 - Project 4
-date: August 9, 2012
+for: MIU 1209 - Project 3
+date: Sept 3rd, 2012
 
 */
 
-body {
-	font-family: Arial, Helvetica, serif;
-	background: -webkit-gradient(linear, left top, 0 330, from(#11175E), to(#1B75BA));
-	min-height: 330px;
-	padding-left: 5px;
-	padding-right: 5px;
-}
-#content{overflow: scroll;}
-
-#indexPageContent {
-	background: #ffffff;
-	border-radius: 15px;
-	padding: 10px 10px 10px 10px;
-	text-align: center;
-}
-
-.tripContent {
-	background: #ffffff;
-	border-radius: 15px;
-	font-size: 14px;
-	padding: 10px 10px 10px 10px;
-	margin: 10px 0px 10px 0px;
-}
-
-h1 {
-	border-radius: 15px;
-	text-align: center;
+#ctaDiv {
+	background-image: url("../img/cta_bg.png");
+	background-repeat: no-repeat;
 	text-shadow: 2px 2px 1px rgba(17, 23, 94, .2);
-	padding: 10px 0px 10px 0px;
-	background: #ffffff;
-} 
-
-h2 {
-	margin-top: 20px;
-	margin-bottom: 5px;
+	height: 232px;
+	width: 300px;
+	margin: 10px auto;
 }
 
-#errors {
-	color: red;
-	font-size: 14px;
-	margin-bottom: 10px;
+#ctaText {
+	color: #000000;
+	text-align: left;
+	position: relative;
+	height: auto;
+	width: auto;
+	left: 90px;
+	top: 80px;
 }
 
-#errors li {
-	min-height: 1px;
-	margin-bottom: 2px;
-}
-
-fieldset {
-	border: 0px;
-}
-
-form {
-	background: #ffffff;
-	border-radius: 15px;
-	font-size: 14px;
-	padding: 0px 0px 10px 0px;
-}
-
-legend {
-	font-size: 24px;
+#nextTripLocation {
+	padding-left: 40px;
 	font-weight: bold;
-	text-shadow: 2px 2px 1px rgba(17, 23, 94, .2);
-	padding-top: 10px;
+	font-size: 22px;
 }
 
-textarea {
-	height: 60px;
-	width: 220px;
+#nextTripDate {
+	padding-left: 60px;
+	font-weight: bold;
+	font-size: 22px;
 }
 
-ul {
-	margin-left: -20px;
-	list-style-type: square;
-}
-
-li {
-	min-height: 30px;
-	margin-bottom: 5px;
-}
-
-#buttonHolder {
-	display: block;
+#ctaActionLink {
+	color: #ffffff;
+	position: relative;
+	height: auto;
+	width: auto;
 	text-align: center;
+	top: 120px;
 }
 
-#footer {
-	margin: 10px 0px 0px 0px;
+#catThumbnailGrid {
 	text-align: center;
+	font-size: 12px;
 }
 
-.links {
-	margin: 0px 5px 0px 5px;
-}
-
-a {
-	color: #63b7ea;
-}
-
-.methodIcon {
-	margin: 5px 5px 0px 0px;
-	float: right;
-}
-
-.editDeleteButtonSpan {
+label.error {
 	display: block;
-	text-align: right;
+	margin: 10px 0;
+	color: #cc0000;
 }
