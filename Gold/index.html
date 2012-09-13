@@ -45,9 +45,9 @@
 			<div data-role="content">
 				<form action="" method="post" id="addTripForm">
 					<div data-role="fieldcontain">
-						<label for="tripType" class="select">Trip Type:</label>
+						<label for="tripType" class="select">*Trip Type:</label>
 						<select name="tripType" id="tripType" data-native-menu="false" class="required">
-							<option>Please Select A Trip Type</option>
+							<option id="selectDefault">Please Select A Trip Type</option>
 							<option value="Business">Business</option>
 							<option value="Education">Education</option>
 							<option value="Family">Family</option>
@@ -56,8 +56,8 @@
 						</select>
 					</div>
 					<div data-role="fieldcontain">
-						<fieldset data-role="controlgroup">
-						<label for="travelMethod">Travel Method:</label>
+						<fieldset data-role="controlgroup" id="radios">
+						<label for="travelMethod">*Travel Method:</label>
 						<input type="radio" value="Plane" id="plane" name="travelMethod" class="required" /><label for="plane">Plane</label>
 						<input type="radio" value="Car" id="car" name="travelMethod" /><label for="car">Car</label>
 						<input type="radio" value="Train" id="train" name="travelMethod" /><label for="train">Train</label>
@@ -65,12 +65,12 @@
 						</fieldset>
 					</div>
 					<div data-role="fieldcontain">
-						<label for="dest">Destination:</label>
+						<label for="dest">*Destination:</label>
 						<input type="text" name="dest" id="dest" class="required" />
 					</div>
 					<div data-role="fieldcontain">
-						<label for="date">Date:</label>
-						<input type="date" name="date" id="date" value="2012-09-15" />
+						<label for="date">*Date:</label>
+						<input type="date" name="date" id="date" placeholder="2012-09-14" />
 					</div>
 					<div data-role="fieldcontain">
 						<label for="numPeople">Number of People:</label>
@@ -81,14 +81,8 @@
 						<textarea name="notes" id="notes"></textarea>
 					</div>
 					<div data-role="fieldcontain">
-						<div class="ui-grid-a">
-							<div class="ui-block-a">
-								<input type="submit" id="addTrip" value="Add Trip" data-theme="b" />
-							</div>
-							<div class="ui-block-b">
-								<input type="reset" value="Reset" data-theme="d" />
-							</div>
-						</div>
+						<input type="submit" id="addTripButton" value="Add Trip" data-theme="b" /><br />
+						<input type="reset" id="resetFormButton" value="Reset" data-theme="d" />
 					</div>
 				</form>
 			</div>
@@ -110,10 +104,8 @@
 				<a href="#index" data-icon="home" class="ui-btn-right" data-ajax="false">Home</a>
 			</div>
 			<div data-role="content">
-				<div data-role="collapsible-set">
-					<div data-role="listview" data-inset="true" data-filter="true" id="searchTripList">
-						<!-- JavaScript inserts data here -->
-					</div>
+				<div data-role="listview" data-inset="true" data-filter="true" id="searchTripList">
+					<!-- JavaScript inserts data here -->
 				</div>
 			</div>
 			<div data-role="footer" data-position="fixed" data-theme="b" id="footer">
@@ -152,8 +144,10 @@
 					</div>
 				</div>
 			</div>
-			<div class="content" id="browseTripList">
-				<!-- JavaScript inserts data here -->
+			<div data-role="content">
+				<div data-role="listview" data-inset="true" id="browseTripList">
+					<!-- JavaScript inserts data here -->
+				</div>
 			</div>
 			<div data-role="footer" data-position="fixed" data-theme="b" id="footer">
 				<div data-role="navbar">
@@ -173,9 +167,9 @@
 				<a href="#index" data-icon="home" class="ui-btn-right">Home</a>
 			</div>
 			<div data-role="content">
-				<a href="http://github.com/iamnick/MIU_Project2" data-role="button">Git Link</a><br />
-				<a href="http://iamnick.github.com/MIU_Project2/Gold/index.html" data-role="button">Gold App Link</a><br />
-				<a href="http://iamnick.github.com/MIU_Project2/Bronze/index.html" data-role="button">Bronze App Link</a><br />
+				<a href="http://github.com/iamnick/MIU_Project3" data-role="button">Git Link</a><br />
+				<a href="http://iamnick.github.com/MIU_Project3/Gold/index.html" data-role="button">Gold App Link</a><br />
+				<a href="http://iamnick.github.com/MIU_Project3/Bronze/index.html" data-role="button">Bronze App Link</a><br />
 				<a href="#" data-role="button" id="clearAllData">Clear All Data</a>
 			</div>
 			<div data-role="footer" data-position="fixed" data-theme="b" id="footer">

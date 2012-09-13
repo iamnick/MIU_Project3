@@ -9,7 +9,7 @@ $('#index').on('pageinit', function(){
 });	
 		
 $('#addItem').on('pageinit', function(){
-
+	delete $.validator.methods.date;
 	var myForm = $('#addTripForm');
 	myForm.validate({
 		invalidHandler: function(form, validator) {
@@ -21,6 +21,17 @@ $('#addItem').on('pageinit', function(){
 	});
 	
 	//any other code needed for addItem page goes here
+	
+	// loops through form and resets values
+	resetFormButton.addEventListener("click", resetForm);
+	function resetForm () {
+		var radioButtons = radios.getElementsByTagName("input");
+		for (var i = 0; i < radioButtons.length; i++) {
+			$(radioButtons[i]).removeAttr('selected');
+		}
+		var slider = document.getElementById("numPeople");
+		slider.value = "1";
+	}
 	
 });
 
